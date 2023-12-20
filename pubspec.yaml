@@ -11,6 +11,9 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+
+  flutter_hooks: ^0.20.3  
+  hooks_riverpod: ^2.4.9
   intl: ^0.18.1
 
 dev_dependencies:

@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Starter App',
       theme: lightTheme(context),
       darkTheme: darkTheme(context),
       home: const HomePage(),

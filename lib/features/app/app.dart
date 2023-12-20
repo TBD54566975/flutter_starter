@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/features/home/home_page.dart';
 import 'package:flutter_starter/l10n/app_localizations.dart';
+import 'package:flutter_starter/shared/theme/theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,10 +10,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightTheme(context),
+      darkTheme: darkTheme(context),
       home: const HomePage(),
       localizationsDelegates: Loc.localizationsDelegates,
       supportedLocales: const [

@@ -1,24 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_starter/l10n/app_localizations.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends HookWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final counter = useState(0);
+
     return Scaffold(
       appBar: AppBar(title: Text(Loc.of(context).appName)),
       body: Padding(
@@ -32,7 +22,7 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
               ),
               Text(
-                '$_counter',
+                '${counter.value}',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ],
@@ -40,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () => counter.value++,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),

@@ -17,10 +17,10 @@ jobs:
         uses: cashapp/activate-hermit@v1
 
       - name: Install Dependencies
-        run: flutter pub get
+        run: make get
 
       - name: Run Flutter Analyze
-        run: flutter analyze
+        run: make analyze
 
       - name: Run Flutter Test
-        run: flutter test
+        run: make test

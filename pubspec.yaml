@@ -12,6 +12,11 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  models:
+    path: ./packages/models
+  services:
+    path: ./packages/services
+
   flutter_hooks: ^0.20.3  
   hooks_riverpod: ^2.4.9
   intl: ^0.18.1

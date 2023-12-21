@@ -7,7 +7,16 @@ run:
 
 .PHONY: get
 get:
-	flutter pub get
+	@echo "Getting dependencies for main project"
+	@flutter pub get
+	@echo "Getting dependencies for packages"
+	@for dir in packages/*; do \
+		if [ -d $$dir ]; then \
+			echo "Getting dependencies in $$dir"; \
+			(cd $$dir && flutter pub get || dart pub get); \
+		fi \
+	done
+
 
 .PHONY: clean
 clean:
@@ -18,12 +27,31 @@ build:
 	flutter build apk
 
 .PHONY: test
-test:
-	flutter test
+test: test-app test-packages
+
+.PHONY: test-app
+test-app:
+	@echo "Running Flutter tests"
+	@flutter test
+
+.PHONY: test-packages
+test-packages:
+	@echo "Running Dart tests in packages"
+	@for dir in packages/*; do \
+		if [ -d $$dir ]; then \
+			echo "Running tests in $$dir"; \
+			(cd $$dir && dart test); \
+		fi \
+	done
 
 .PHONY: analyze
 analyze:
-	flutter analyze
+	@flutter analyze
+	@for dir in packages/*; do \
+		if [ -d $$dir ]; then \
+			(cd $$dir && dart analyze); \
+		fi \
+	done	
 
 .PHONY: generate
 generate:

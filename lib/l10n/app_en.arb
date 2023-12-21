@@ -1,4 +1,15 @@
 {
     "appName": "Flutter Starter App",
+    "title": "Title",
+    "description": "Description",
+    "counter": "Counter",
+    "increment": "Increment",
+    "save": "Save",
+
+    "todos": "Todos",
+    "createTodo": "Create Todo",
+    "updateTodo": "Update Todo",
+    "titleRequired": "Title is required",
+    
     "youHavePushedTheButton": "You have pushed the button this many times:"
 }

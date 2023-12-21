@@ -12,18 +12,21 @@ class CounterPage extends HookWidget {
     return Scaffold(
       appBar: AppBar(title: Text(Loc.of(context).appName)),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              Loc.of(context).youHavePushedTheButton,
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              '${counter.value}',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                Loc.of(context).youHavePushedTheButton,
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                '${counter.value}',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

@@ -31,7 +31,9 @@ jobs:
             ${{ runner.os }}-hermit-cache-
 
       - name: Install Dependencies
-        run: just get
+        run: |
+          hermit install
+          just get
 
       - name: Run Flutter Analyze
         run: just analyze

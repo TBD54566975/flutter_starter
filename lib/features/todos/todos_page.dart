@@ -15,7 +15,7 @@ class TodosPage extends HookConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: Text(Loc.of(context).todos)),
       body: todos.isEmpty
-          ? const Center(child: Text('No Todos'))
+          ? Center(child: Text(Loc.of(context).noTodos))
           : ListView.builder(
               itemCount: todos.length,
               itemBuilder: (context, index) {

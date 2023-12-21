@@ -17,7 +17,10 @@ class TodoFormPage extends HookConsumerWidget {
     final description = useState(todo?.description);
 
     return Scaffold(
-      appBar: AppBar(title: Text(isNew ? 'New Todo' : 'Edit Todo')),
+      appBar: AppBar(
+        title: Text(
+            isNew ? Loc.of(context).createTodo : Loc.of(context).updateTodo),
+      ),
       body: Form(
         child: Padding(
           padding: const EdgeInsets.all(16),

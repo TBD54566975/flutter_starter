@@ -97,6 +97,60 @@ abstract class Loc {
   /// **'Flutter Starter App'**
   String get appName;
 
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @counter.
+  ///
+  /// In en, this message translates to:
+  /// **'Counter'**
+  String get counter;
+
+  /// No description provided for @increment.
+  ///
+  /// In en, this message translates to:
+  /// **'Increment'**
+  String get increment;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @todos.
+  ///
+  /// In en, this message translates to:
+  /// **'Todos'**
+  String get todos;
+
+  /// No description provided for @createTodo.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Todo'**
+  String get createTodo;
+
+  /// No description provided for @updateTodo.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Todo'**
+  String get updateTodo;
+
+  /// No description provided for @titleRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Title is required'**
+  String get titleRequired;
+
   /// No description provided for @youHavePushedTheButton.
   ///
   /// In en, this message translates to:

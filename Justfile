@@ -2,7 +2,7 @@
 run:
   flutter run
 
-# Get packages
+# Get Flutter and Dart packages
 get:
   #!/bin/bash
   echo "Getting dependencies for main project"
@@ -50,7 +50,7 @@ analyze:
     fi \
   done  
 
-# Generate code
+# Generate code (localization, etc.)
 generate:
   flutter gen-l10n
 

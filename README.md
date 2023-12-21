@@ -1,33 +1,53 @@
-# $PROJECT_NAME README
+# Flutter Starter
 
-Congrats, project leads! You got a new project to grow!
+![Build Status](https://github.com/TBD54566975/flutter_starter/actions/workflows/ci.yml/badge.svg)
 
-This stub is meant to help you form a strong community around your work. It's yours to adapt, and may 
-diverge from this initial structure. Just keep the files seeded in this repo, and the rest is yours to evolve! 
+A starter project for Flutter apps. This start setups up best practices for Flutter apps, including:
+* Localization
+* Theming
+* CI/CD
+* Testing
+* Code generation
+* Dependency injection and state management (via [Riverpod](https://riverpod.dev/))
+* Linting and formatting
+* Separate application layers implemented via sub-packages (e.g. `services`)
 
-## Introduction
+## Quick start
 
-Orient users to the project here. This is a good place to start with an assumption
-that the user knows very little - so start with the Big Picture and show how this
-project fits into it. It may be good to reference/link the broader architecture in the
-`collaboration` repo or the developer site here.
+1. Clone this repo
+2. Use [Hermit](https://cashapp.github.io/hermit/usage/get-started/) to install required dependencies (or manually install and setup [Flutter](https://docs.flutter.dev/get-started/install) and [Just](https://github.com/casey/just))
+3. Run `just get` to install dependencies
+4. Run `just run` to run the app
 
-Then maybe a dive into what this project does.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 
-Diagrams and other visuals are helpful here. Perhaps code snippets showing usage.
 
-Project leads should complete, alongside this `README`:
-* [CODEOWNERS](./CODEOWNERS) - set project lead(s)
-* [CONTRIBUTING.md](./CONTRIBUTING.md) - Fill out how to: install prereqs, build, test, run, access CI, chat, discuss, file issues
-* [Bug-report.md](.github/ISSUE_TEMPLATE/bug-report.md) - Fill out `Assignees` add codeowners @names
-* [config.yml](.github/ISSUE_TEMPLATE/config.yml) - remove "(/add your discord channel..)" and replace the url with your Discord channel if applicable
+## TBD theme
 
-The other files in this template repo may be used as-is:
-* [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
-* [GOVERNANCE.md](./GOVERNANCE.md)
-* [LICENSE](./LICENSE)
+The theme is defined in `lib/shared/theme.dart`. It is a `ThemeData` object that is used by the `MaterialApp` and setup during app initialization in  `lib/features/app/app.dart`.
 
-## Project Resources
+> Note: The theme is currently a work in progress. In the future, we might move the theme out to a dedicated TBD Design System package.
+
+### Example screens
+
+#### Counter
+<p align="center">
+  <img src="docs/counter-light.png" alt="First Image" width="400" />
+  <img src="docs/counter-dark.png" alt="Second Image" width="400" />
+</p>
+
+#### Todos
+<p align="center">
+  <img src="docs/todos-light.png" alt="First Image" width="400" />
+  <img src="docs/todos-dark.png" alt="Second Image" width="400" />
+</p>
+
+<p align="center">
+  <img src="docs/todo-light.png" alt="First Image" width="400" />
+  <img src="docs/todo-dark.png" alt="Second Image" width="400" />
+</p>
+
+## Project resources
 
 | Resource                                   | Description                                                                    |
 | ------------------------------------------ | ------------------------------------------------------------------------------ |

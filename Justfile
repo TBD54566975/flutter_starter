@@ -53,3 +53,10 @@ analyze:
 # Generate code
 generate:
   flutter gen-l10n
+
+# Coverage report
+coverage:
+  #!/bin/bash
+  flutter test --coverage
+  genhtml coverage/lcov.info -o coverage/html
+  open coverage/html/index.html

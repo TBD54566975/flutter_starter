@@ -7,8 +7,9 @@
     "save": "Save",
 
     "todos": "Todos",
-    "createTodo": "Create Todo",
-    "updateTodo": "Update Todo",
+    "noTodos": "No todos",
+    "createTodo": "Create todo",
+    "updateTodo": "Update todo",
     "titleRequired": "Title is required",
     
     "youHavePushedTheButton": "You have pushed the button this many times:"

@@ -26,10 +26,13 @@ class LocEn extends Loc {
   String get todos => 'Todos';
 
   @override
-  String get createTodo => 'Create Todo';
+  String get noTodos => 'No todos';
 
   @override
-  String get updateTodo => 'Update Todo';
+  String get createTodo => 'Create todo';
+
+  @override
+  String get updateTodo => 'Update todo';
 
   @override
   String get titleRequired => 'Title is required';

@@ -133,16 +133,22 @@ abstract class Loc {
   /// **'Todos'**
   String get todos;
 
+  /// No description provided for @noTodos.
+  ///
+  /// In en, this message translates to:
+  /// **'No todos'**
+  String get noTodos;
+
   /// No description provided for @createTodo.
   ///
   /// In en, this message translates to:
-  /// **'Create Todo'**
+  /// **'Create todo'**
   String get createTodo;
 
   /// No description provided for @updateTodo.
   ///
   /// In en, this message translates to:
-  /// **'Update Todo'**
+  /// **'Update todo'**
   String get updateTodo;
 
   /// No description provided for @titleRequired.

@@ -19,16 +19,16 @@ jobs:
       - name: Cache Flutter
         uses: actions/cache@v3
         with:
-          path: ~/.cache/hermit/cache/pkg
+          path: ~/.cache/hermit/pkg
           key: ${{ runner.os }}-hermit-cache-${{ hashFiles('bin/.*.pkg') }}
           restore-keys: |
             ${{ runner.os }}-hermit-cache-
 
       - name: Install Dependencies
-        run: make get
+        run: just get
 
       - name: Run Flutter Analyze
-        run: make analyze
+        run: just analyze
 
       - name: Run Flutter Test
-        run: make test
+        run: just test

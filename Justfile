@@ -28,13 +28,12 @@ test: test-app test-packages
 
 # Run Flutter tests
 test-app:
-  @echo "Running Flutter tests"
-  @flutter test
+  flutter test
 
 # Run package tests
 test-packages:
-  @echo "Running Dart tests in packages"
-  @for dir in packages/*; do \
+  #!/bin/bash
+  for dir in packages/*; do \
     if [ -d $dir ]; then \
       echo "Running tests in $dir"; \
       (cd $dir && dart test); \
@@ -43,8 +42,9 @@ test-packages:
 
 # Analyze the project's Dart code
 analyze:
-  @flutter analyze
-  @for dir in packages/*; do \
+  #!/bin/bash
+  flutter analyze
+  for dir in packages/*; do \
     if [ -d $dir ]; then \
       (cd $dir && dart analyze); \
     fi \

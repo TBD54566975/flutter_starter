@@ -16,11 +16,17 @@ jobs:
       - name: Init Hermit
         uses: cashapp/activate-hermit@v1
 
+      - name: Folder Hash
+        id: bin-hash
+        uses: theowenyoung/folder-hash@v3
+        with:
+          path: bin
+
       - name: Cache Flutter
         uses: actions/cache@v3
         with:
           path: ~/.cache/hermit/pkg
-          key: ${{ runner.os }}-hermit-cache-${{ hashFiles('bin/.*.pkg') }}
+          key: ${{ runner.os }}-hermit-cache-${{ steps.bin-hash.outputs.hash }}
           restore-keys: |
             ${{ runner.os }}-hermit-cache-
 

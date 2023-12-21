@@ -17,7 +17,7 @@ jobs:
         uses: cashapp/activate-hermit@v1
 
       - name: Cache Flutter
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.cache/hermit/cache/pkg
           key: ${{ runner.os }}-hermit-cache-${{ hashFiles('bin/.*.pkg') }}
